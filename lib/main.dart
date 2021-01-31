@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('ID Details'),
-          
+        ),
+        body: Row(
+          children: [
+
+          ],
         ),
       ),
     );

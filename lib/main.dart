@@ -21,6 +21,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  int level = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,6 +35,18 @@ class _HomeState extends State<Home> {
           ),
           elevation: 0.0,
         ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
+        child: Icon(
+          Icons.add,
+          color: Colors.black,
+        ),
+        onPressed: () {
+            setState(() {
+              level += 1;
+            });
+        },
+      ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(10, 20, 40, 0),
         child: Column(
@@ -100,7 +115,7 @@ class _HomeState extends State<Home> {
             SizedBox(height: 8.0),
             Container(
               child: Text(
-                "0",
+                "$level",
                 style: TextStyle(
                   fontSize: 30.0,
                   fontWeight: FontWeight.w900,
@@ -111,13 +126,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.amber,
-          child: Icon(
-              Icons.add,
-            color: Colors.black,
-          ),
-      ),
+
     );
   }
 }

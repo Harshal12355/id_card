@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           backgroundColor: Colors.grey[900],
           title: Center(
-              child: Text("ID-Details")
+              child: Text("Street Fighter Character"),
           ),
           elevation: 0.0,
         ),
@@ -52,6 +52,13 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children : [
+            Center(
+              child: CircleAvatar(
+                radius: 70.0,
+                backgroundImage: AssetImage('Assets/ChunLi.png'),
+              ),
+            ),
+            SizedBox(height: 8.0,),
             Container(
               child: Text(
                   "NAME",
@@ -121,6 +128,65 @@ class _HomeState extends State<Home> {
                   fontWeight: FontWeight.w900,
                   color: Colors.amber,
                 ),
+              ),
+            ),
+            Divider(
+              height: 30.0,
+              color: Colors.grey[600],
+              thickness: 1.0,
+            ),
+
+            SizedBox(height: 6.0),
+            Container(
+              child: Text(
+                "CONTACT DETAILS",
+                style: TextStyle(
+                    color: Colors.white
+                ),
+              ),
+            ),
+            SizedBox(height: 8.0),
+            Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                          Icons.email,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                        child: Text(
+                            "chunli@somemail.com",
+                          style: TextStyle(
+                            color: Colors.amber,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 5.0,),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.white,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                        child: Text(
+                          "+971 55 325-2345",
+                          style: TextStyle(
+                            color: Colors.amber,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ],
